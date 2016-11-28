@@ -10,7 +10,8 @@ class LintView(TemplateView):
             text = request.GET.urlencode().decode('utf-8').replace('_', ' ')
             doc = nlp(text)
         except:
+            print("Unexpected error:", sys.exc_info()[0])
             pass
         finally:
-            print doc[0].pos_
-            return JsonResponse(doc[0].pos_, safe=False)
+            print doc[0].orth_
+            return JsonResponse(doc[0].orth_, safe=False)
