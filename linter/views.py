@@ -12,5 +12,5 @@ class LintView(TemplateView):
         except:
             pass
         finally:
-            print doc[0].orth_
-            return JsonResponse(doc[0].dep_, safe=False)
+            print doc[0].pos_
+            return JsonResponse(doc[0].pos_, safe=False)
