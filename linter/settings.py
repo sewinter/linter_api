@@ -25,7 +25,7 @@ SECRET_KEY = 'e)-8^4swhuhtpirb1w7k%=z^f*=0s8%02i0s920hgzc8r^qzsl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'pacific-lake-20547.herokuapp.com']
+ALLOWED_HOSTS = [u'lynter.herokuapp.com']
 
 
 # Application definition
