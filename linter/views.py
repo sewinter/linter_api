@@ -6,6 +6,11 @@ nlp = spacy.en.English()
 
 class LintView(TemplateView):
     def get(self, request, **kwargs):
-        text = request.GET.urlencode().decode('utf-8').replace('_', ' ')
-        doc = nlp(text)
-        return JsonResponse(doc[0].dep_, safe=False)
+        try:
+            text = request.GET.urlencode().decode('utf-8').replace('_', ' ')
+            doc = nlp(text)
+        except:
+            pass
+        finally:
+            print doc[0].orth_
+            return JsonResponse(doc[0].dep_, safe=False)
